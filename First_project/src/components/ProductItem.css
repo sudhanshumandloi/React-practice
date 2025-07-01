@@ -1,0 +1,12 @@
+.cardproduct_item{
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    padding: 21px; 
+    width: 350px;
+    margin: 10px;
+    border-radius: 15px;
+}
+button{
+    padding: 0%;
+}
