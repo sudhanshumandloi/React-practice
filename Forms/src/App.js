@@ -41,20 +41,23 @@ function App() {
         type='text'
         placeholder={"Your First Name"} 
         onChange={changeHandler} 
-        name='firstName' />
+        name='firstName'
+        value={formData.firstname} />
       <br />
       <br />
       <input
         type='text'
         placeholder={"Your Last Name"} 
         onChange={changeHandler}
-        name='lastName' />
+        name='lastName'
+        value={formData.lastName} />
       <br />
       <br />
       <input type='email' 
         placeholder={"Enter your Email"} 
         onChange={changeHandler}
-        name='yourEmail' />
+        name='yourEmail'
+        value={formData.yourEmail} />
     </div>
   );
 }
