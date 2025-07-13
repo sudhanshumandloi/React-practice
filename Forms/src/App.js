@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [formData, setFormData]= useState( 
     {firstName: '', lastName: '', yourEmail: '', comments: '', isVisible:true, mode:'', favCar:''})
-  console.log(formData);
+  
   function changeHandler(event){
     const {name, value, checked, type} = event.target;
     setFormData( prevFormaData => {
@@ -15,9 +15,15 @@ function App() {
     });
   }
 
+  function submitHandler(event){
+    event.preventDefault();
+    console.log("Finaly printing the entire data of form..");
+    console.log(formData);
+  }
+
   return (
     <div className='App'>
-      <form>
+      <form onSubmit={submitHandler}>
       <input 
         type='text'
         placeholder={"Your First Name"} 
@@ -100,6 +106,11 @@ function App() {
         <option value={'safari'}>Safari</option>
         <option value={'harrier'}>Harrier</option>
       </select>
+
+      <br />
+      <br />
+
+      <button>Submit</button>
       </form>
     </div>
   );
