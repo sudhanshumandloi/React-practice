@@ -5,10 +5,11 @@ function App() {
   const [formData, setFormData]= useState( {firstName: '', lastName: '', yourEmail: '', comments: '', isVisible:true})
   console.log(formData);
   function changeHandler(event){
+    const {name, value, checked, type} = event.target;
     setFormData( prevFormaData => {
       return {
         ...prevFormaData,
-        [event.target.name]: event.target.value
+        [name]: type === "ckeckbox" ? checked : value
       }
     });
   }
