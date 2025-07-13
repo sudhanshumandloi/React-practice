@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [formData, setFormData]= useState( {firstName: '', lastName: '', yourEmail: '', comments: ''})
+  const [formData, setFormData]= useState( {firstName: '', lastName: '', yourEmail: '', comments: '', isVisible:true})
   console.log(formData);
   function changeHandler(event){
     setFormData( prevFormaData => {
@@ -50,6 +50,17 @@ function App() {
         onChange={changeHandler}
         name='comments'
         value={formData.comments} />
+
+      <br />
+      <br />
+
+      <input 
+        type='checkbox'
+        onChange={changeHandler}
+        name='isVisible'
+        id='isVisible'
+        checked={formData.isVisible}/>
+        <label htmlFor='isVisible'>Am i Visible</label>
       </form>
     </div>
   );
