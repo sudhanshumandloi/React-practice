@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [formData, setFormData]= useState( {firstName: '', lastName: '', yourEmail: '', comments: '', isVisible:true})
+  const [formData, setFormData]= useState( 
+    {firstName: '', lastName: '', yourEmail: '', comments: '', isVisible:true, mode:''})
   console.log(formData);
   function changeHandler(event){
     const {name, value, checked, type} = event.target;
@@ -61,7 +62,29 @@ function App() {
         name='isVisible'
         id='isVisible'
         checked={formData.isVisible}/>
-        <label htmlFor='isVisible'>Am i Visible</label>
+      <label htmlFor='isVisible'>Am i Visible</label>
+
+      <br />
+      <br />
+
+      <input 
+        type='radio'
+        onChange={changeHandler}
+        name='mode'
+        id ="online-mode"
+        value={'online-mode'}
+        checked={formData.mode === "online-mode"}/>
+      <label htmlFor='online-mode'>Online-mode</label>
+
+      <input 
+        type='radio'
+        onChange={changeHandler}
+        name='mode'
+        id ="offline-mode"
+        value={'offline-mode'}
+        checked={formData.mode === "offline-mode"}/>
+      <label htmlFor='offline-mode'>Offline-mode</label>
+
       </form>
     </div>
   );
