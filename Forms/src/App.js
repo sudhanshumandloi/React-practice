@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [formData, setFormData]= useState( 
-    {firstName: '', lastName: '', yourEmail: '', comments: '', isVisible:true, mode:''})
+    {firstName: '', lastName: '', yourEmail: '', comments: '', isVisible:true, mode:'', favCar:''})
   console.log(formData);
   function changeHandler(event){
     const {name, value, checked, type} = event.target;
@@ -67,24 +67,39 @@ function App() {
       <br />
       <br />
 
-      <input 
-        type='radio'
-        onChange={changeHandler}
-        name='mode'
-        id ="online-mode"
-        value={'online-mode'}
-        checked={formData.mode === "online-mode"}/>
-      <label htmlFor='online-mode'>Online-mode</label>
+      <fieldset>
+        <legend>Mode</legend>
+        <input 
+          type='radio'
+          onChange={changeHandler}
+          name='mode'
+          id ="online-mode"
+          value={'online-mode'}
+          checked={formData.mode === "online-mode"}/>
+        <label htmlFor='online-mode'>Online-mode</label>
 
-      <input 
-        type='radio'
-        onChange={changeHandler}
-        name='mode'
-        id ="offline-mode"
-        value={'offline-mode'}
-        checked={formData.mode === "offline-mode"}/>
-      <label htmlFor='offline-mode'>Offline-mode</label>
+        <input 
+          type='radio'
+          onChange={changeHandler}
+          name='mode'
+          id ="offline-mode"
+          value={'offline-mode'}
+          checked={formData.mode === "offline-mode"}/>
+        <label htmlFor='offline-mode'>Offline-mode</label>
+      </fieldset>
 
+      <label htmlFor='favcar'>Your favourite car is </label>
+      <select
+      onChange={changeHandler}
+      value={formData.favCar}
+      name='favCar'
+      id='favCar' >
+        <option value={'scarpio'}>Scarpio</option>
+        <option value={'xuv700'}>XUV 700</option>
+        <option value={'bolero'}>Bolero</option>
+        <option value={'safari'}>Safari</option>
+        <option value={'harrier'}>Harrier</option>
+      </select>
       </form>
     </div>
   );
