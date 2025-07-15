@@ -229,7 +229,8 @@ function App() {
 
           </fieldset>
 
-          <button>Submit</button>
+          <button className='bg-blue-500 font-medium text-white py-2 px-4 rounded-md hover:bg-blue-600
+        transition-all duration-200 w-15'>Submit</button>
         </form>
       </div>
     </div>
