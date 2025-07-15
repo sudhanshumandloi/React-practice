@@ -31,6 +31,11 @@ function App() {
     event.preventDefault();
     console.log("Finaly printing the entire data of form..");
     console.log(formData);
+
+     let data = Object.keys(formData).map((key) => `${key} = ${formData[key]}`);
+        // join() returns an array as a string
+        data = data.join(" \n");
+        alert(data);
   }
 
   return (
