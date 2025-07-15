@@ -7,6 +7,7 @@ function App() {
     lastName: '', 
     yourEmail: '', 
     country:'',
+    city:'',
     isVisible:true, 
     mode:''
   });
@@ -84,6 +85,18 @@ function App() {
             <option value={'shrilamka'}>Shri Lanka</option>
             <option value={'uae'}>UAE</option>
           </select>
+
+          <label htmlFor='city'
+            className='font-medium text-sm'>City</label>
+          <input
+            type='text' 
+            name='yourcity'
+            id='city'
+            placeholder={"Enter your city"} 
+            onChange={changeHandler}
+            value={formData.city} 
+            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
+          />
 
       <input 
         type='checkbox'
