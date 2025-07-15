@@ -11,7 +11,9 @@ function App() {
     street:'',
     state:'',
     zipcode:'',
-    isVisible:true, 
+    comment:true,
+    candidate:false,
+    offer:false,
     mode:''
   });
   
@@ -137,13 +139,54 @@ function App() {
             className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
           />
 
-      <input 
-        type='checkbox'
-        onChange={changeHandler}
-        name='isVisible'
-        id='isVisible'
-        checked={formData.isVisible}/>
-      <label htmlFor='isVisible'>Am i Visible</label>
+          <fieldset>
+            <legend>By Email</legend>
+            <div className='flex flex-row gap-1'>
+              <input 
+                type='checkbox'
+                name='yourcomment'
+                id='comment'
+                onChange={changeHandler}
+                checked={formData.comment}
+              />
+              <div className='m-2'>
+                <label htmlFor='comment'
+                className='font-medium text-sm'>Comments</label>
+                <p className='text-sm text-gray-500'>Get notified when someones posts a comment on a posting.</p>
+              </div> 
+            </div>
+
+            <div className='flex flex-row gap-1'>
+              <input 
+                type='checkbox'
+                name='candidate'
+                id='candidate'
+                onChange={changeHandler}
+                checked={formData.candidate}
+              />
+              <div className='m-2'>
+                <label htmlFor='candidate'
+                className='font-medium text-sm'>Candidates</label>
+                <p className='text-sm text-gray-500'>Get notified when a candidate applies for a job.</p>
+              </div> 
+            </div>
+
+            <div className='flex flex-row gap-1'>
+              <input 
+                type='checkbox'
+                name='offer'
+                id='offer'
+                onChange={changeHandler}
+                checked={formData.offer}
+              />
+              <div className='m-2'>
+                <label htmlFor='offer'
+                className='font-medium text-sm'>Offers</label>
+                <p className='text-sm text-gray-500'>Get notified when a candidate accepts or rejects an offer.</p>
+              </div> 
+            </div>
+          </fieldset>
+      
 
       <fieldset>
         <legend>Mode</legend>
