@@ -8,6 +8,7 @@ function App() {
     yourEmail: '', 
     country:'',
     city:'',
+    street:'',
     isVisible:true, 
     mode:''
   });
@@ -95,6 +96,18 @@ function App() {
             placeholder={"Enter your city"} 
             onChange={changeHandler}
             value={formData.city} 
+            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
+          />
+
+          <label htmlFor='street'
+            className='font-medium text-sm'>Street Address</label>
+          <input
+            type='text' 
+            name='yourstreet'
+            id='street'
+            placeholder={"street address"} 
+            onChange={changeHandler}
+            value={formData.street} 
             className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
           />
 
