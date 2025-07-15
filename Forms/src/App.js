@@ -9,6 +9,8 @@ function App() {
     country:'',
     city:'',
     street:'',
+    state:'',
+    zipcode:'',
     isVisible:true, 
     mode:''
   });
@@ -119,7 +121,19 @@ function App() {
             id='state'
             placeholder={"Enter state name"} 
             onChange={changeHandler}
-            value={formData.street} 
+            value={formData.state} 
+            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
+          />
+
+          <label htmlFor='zipcode'
+            className='font-medium text-sm'>ZipCode / PostalCode</label>
+          <input
+            type='text' 
+            name='yourzipcode'
+            id='zipcode'
+            placeholder={"Enter zipcode of your area"} 
+            onChange={changeHandler}
+            value={formData.zipcode} 
             className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
           />
 
