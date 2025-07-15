@@ -57,11 +57,17 @@ function App() {
             className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
           />
 
-      <input type='email' 
-        placeholder={"Enter your Email"} 
-        onChange={changeHandler}
-        name='yourEmail'
-        value={formData.yourEmail} />
+          <label htmlFor='email'
+            className='font-medium text-sm'>Email Address</label>
+          <input
+            type='email' 
+            name='yourEmail'
+            id='email'
+            placeholder={"Enter your Email"} 
+            onChange={changeHandler}
+            value={formData.yourEmail} 
+            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
+          />
 
       <input 
         type='checkbox'
