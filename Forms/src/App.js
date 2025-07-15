@@ -5,7 +5,7 @@ function App() {
   const [formData, setFormData]= useState({
     firstName: '', 
     lastName: '', 
-    yourEmail: '', 
+    email: '', 
     country:'',
     city:'',
     street:'',
@@ -14,7 +14,7 @@ function App() {
     comment:true,
     candidate:false,
     offer:false,
-    mode:''
+    notification:''
   });
   
   function changeHandler(event){
@@ -67,7 +67,7 @@ function App() {
             className='font-medium text-sm'>Email Address</label>
           <input
             type='email' 
-            name='yourEmail'
+            name='email'
             id='email'
             placeholder={"Enter your Email"} 
             onChange={changeHandler}
@@ -95,7 +95,7 @@ function App() {
             className='font-medium text-sm'>City</label>
           <input
             type='text' 
-            name='yourcity'
+            name='city'
             id='city'
             placeholder={"Enter your city"} 
             onChange={changeHandler}
@@ -107,7 +107,7 @@ function App() {
             className='font-medium text-sm'>Street Address</label>
           <input
             type='text' 
-            name='yourstreet'
+            name='street'
             id='street'
             placeholder={"street address"} 
             onChange={changeHandler}
@@ -119,7 +119,7 @@ function App() {
             className='font-medium text-sm'>State / Province</label>
           <input
             type='text' 
-            name='yourstate'
+            name='state'
             id='state'
             placeholder={"Enter state name"} 
             onChange={changeHandler}
@@ -131,7 +131,7 @@ function App() {
             className='font-medium text-sm'>ZipCode / PostalCode</label>
           <input
             type='text' 
-            name='yourzipcode'
+            name='zipcode'
             id='zipcode'
             placeholder={"Enter zipcode of your area"} 
             onChange={changeHandler}
@@ -140,11 +140,11 @@ function App() {
           />
 
           <fieldset>
-            <legend>By Email</legend>
+            <legend className='font-medium text-sm'>By Email</legend>
             <div className='flex flex-row gap-1'>
               <input 
                 type='checkbox'
-                name='yourcomment'
+                name='comment'
                 id='comment'
                 onChange={changeHandler}
                 checked={formData.comment}
@@ -188,33 +188,50 @@ function App() {
           </fieldset>
       
 
-      <fieldset>
-        <legend>Mode</legend>
-        <input 
-          type='radio'
-          onChange={changeHandler}
-          name='mode'
-          id ="online-mode"
-          value={'online-mode'}
-          checked={formData.mode === "online-mode"}/>
-        <label htmlFor='online-mode'>Online-mode</label>
+          <fieldset>
+            <legend className='font-medium text-sm'>Push Notification</legend>
+            <p className='text-sm text-gray-500'>These are delivered via sms to your mobile phone</p>
+            <input 
+              type='radio'
+              name='notification'
+              id ="everything"
+              onChange={changeHandler}
+              value={'everything'}
+              checked={formData.notification === "everything"}
+            />
+            <label htmlFor='everything'
+            className='font-medium text-sm mx-2'>Everything</label>
 
-        <input 
-          type='radio'
-          onChange={changeHandler}
-          name='mode'
-          id ="offline-mode"
-          value={'offline-mode'}
-          checked={formData.mode === "offline-mode"}/>
-        <label htmlFor='offline-mode'>Offline-mode</label>
-      </fieldset>
+            <br />
+            
+            <input 
+              type='radio'
+              name='notification'
+              id ="same_as_email"
+              onChange={changeHandler}
+              value={'same_as_email'}
+              checked={formData.notification === "same_as_email"}/>
+              <label htmlFor='same_as_email'
+              className='font-medium text-sm mx-2'>Same as email</label>
 
-      <br />
-      <br />
+              <br />
 
-      <button>Submit</button>
-      </form>
-    </div>
+              
+            <input 
+              type='radio'
+              name='notification'
+              id ="no_push_notification"
+              onChange={changeHandler}
+              value={'no_push_notification'}
+              checked={formData.notification === "no_push_notification"}/>
+              <label htmlFor='no_push_notification'
+              className='font-medium text-sm mx-2'>No push notification</label>
+
+          </fieldset>
+
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
