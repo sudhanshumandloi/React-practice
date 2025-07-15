@@ -111,6 +111,18 @@ function App() {
             className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
           />
 
+          <label htmlFor='state'
+            className='font-medium text-sm'>State / Province</label>
+          <input
+            type='text' 
+            name='yourstate'
+            id='state'
+            placeholder={"Enter state name"} 
+            onChange={changeHandler}
+            value={formData.street} 
+            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
+          />
+
       <input 
         type='checkbox'
         onChange={changeHandler}
