@@ -26,12 +26,16 @@ function App() {
     <div className="md:w-1/2 md:max-w-[1000px] rounded-md p-[30px] mx-auto shadow-md">
       <form onSubmit={submitHandler}
       className=' flex flex-col gap-2'>
+      <label htmlFor='firstname'
+      className='font-medium text-sm'>First Name</label>
       <input 
-        type='text'
-        placeholder={"Your First Name"} 
-        onChange={changeHandler} 
+        type='text' 
         name='firstName'
-        value={formData.firstName} />
+        id='firstname'
+        placeholder={"Your First Name"} 
+        onChange={changeHandler}
+        value={formData.firstName} 
+        className='w-full border border-blue-400 rounded-md p-2 mt-1'/>
 
       <input
         type='text'
