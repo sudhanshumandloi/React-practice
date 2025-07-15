@@ -6,9 +6,9 @@ function App() {
     firstName: '', 
     lastName: '', 
     yourEmail: '', 
+    country:'',
     isVisible:true, 
-    mode:'', 
-    favCar:''
+    mode:''
   });
   
   function changeHandler(event){
@@ -69,6 +69,23 @@ function App() {
             className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3'
           />
 
+          <label htmlFor='country'
+            className='font-medium text-sm'>Country</label>
+          <select
+            name='country'
+            id='country'
+            onChange={changeHandler}
+            value={formData.favCar}
+            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3' 
+            >
+
+            <option value={'india'}>India</option>
+            <option value={'pakistan'}>Pakistan</option>
+            <option value={'usa'}>USA</option>
+            <option value={'shrilamka'}>Shri Lanka</option>
+            <option value={'uae'}>UAE</option>
+          </select>
+
       <input 
         type='checkbox'
         onChange={changeHandler}
@@ -97,19 +114,6 @@ function App() {
           checked={formData.mode === "offline-mode"}/>
         <label htmlFor='offline-mode'>Offline-mode</label>
       </fieldset>
-
-      <label htmlFor='favcar'>Your favourite car is </label>
-      <select
-      onChange={changeHandler}
-      value={formData.favCar}
-      name='favCar'
-      id='favCar' >
-        <option value={'scarpio'}>Scarpio</option>
-        <option value={'xuv700'}>XUV 700</option>
-        <option value={'bolero'}>Bolero</option>
-        <option value={'safari'}>Safari</option>
-        <option value={'harrier'}>Harrier</option>
-      </select>
 
       <br />
       <br />
