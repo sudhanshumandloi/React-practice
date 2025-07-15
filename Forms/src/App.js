@@ -75,9 +75,8 @@ function App() {
             name='country'
             id='country'
             onChange={changeHandler}
-            value={formData.favCar}
-            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3' 
-            >
+            value={formData.country}
+            className='w-full border border-blue-400 rounded-md p-2 mt-1 mb-3' >
 
             <option value={'india'}>India</option>
             <option value={'pakistan'}>Pakistan</option>
