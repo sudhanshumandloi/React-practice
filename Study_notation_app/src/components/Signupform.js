@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
-const signupform = () => {
+const Signupform = () => {
+    const [formData, setFormdata] = useState({
+        firstname:'', lastname:'', email:'', password:'', confirmpassword:''
+    });
+
+    const changeHandler = () =>{}
+
     return (
-        <div>signupform</div>
+        <div>
+            <form>
+                {/* student-instructor tab */}
+                <div>
+                    <button>Student</button>
+                    <button>Instructor</button>
+                </div>
+
+
+            </form>
+        </div>
     )
 }
 
-export default signupform;
+export default Signupform;

@@ -27,10 +27,11 @@ const Loginform = () => {
                         type="email"
                         value={formData.email}
                         onChange={changeHandler}
-                        placeholder="Enter email id"/>
+                        placeholder="Enter email id"
+                        name="email"
+                    />
                 </label>
 
-                
                 <label>
                     <p>
                         Password<sub>*</sub>
@@ -39,7 +40,9 @@ const Loginform = () => {
                         type={showPassword ? ("text") : ("password")}
                         value={formData.email}
                         onChange={changeHandler}
-                        placeholder="Enter email id"/>
+                        placeholder="Enter email id"
+                        name="password"
+                    />
 
                     <span onClick={() => setShowPassword((prev) => !prev)}>
                         {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
@@ -49,6 +52,8 @@ const Loginform = () => {
                         <p>Forget Password</p>
                     </Link>
                 </label>
+                 
+                <button>Sign in</button>
             </form>
         </div>
     )
