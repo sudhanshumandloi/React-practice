@@ -10,7 +10,7 @@ function Navbar(){
             </Link>
 
             <nav>
-                <ul className="flex">
+                <ul className="flex ml-3 gap-3">
                     <li>
                         <Link to = "/" >Home</Link>
                     </li>
@@ -23,7 +23,7 @@ function Navbar(){
                 </ul>
             </nav>
 
-            <div>
+            <div className="flex ml-3 gap-3">
                 {
                     <Link to="/login">
                         <button>
@@ -42,6 +42,13 @@ function Navbar(){
                     <Link to="/">
                         <button>
                             Log out
+                        </button>
+                    </Link>
+                }
+                {
+                    <Link to="/dashbord">
+                        <button>
+                            dashbord
                         </button>
                     </Link>
                 }
