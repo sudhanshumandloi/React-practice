@@ -1,9 +1,39 @@
 import React from "react";
+import {backframe} from "../assets/frame.png";
+import Loginform from "./Loginform";
+import Signupform from "./Signupform";
 
-function Template(){
+function Template({title, desc1, desc2, image, formtyp, setIsLoggedIn}){
     return(
         <div>
-            Template
+            <div>
+                <h1>{title}</h1>
+                <p>
+                    <span>{desc1}</span>
+                    <span>{desc2}</span>
+                </p>
+
+                {formtyp === "signup" ?
+                (<Signupform />):
+                (<Loginform />)
+                }
+
+                <div>
+                    <div></div>
+                    <div>OR</div>
+                    <div></div>
+                </div>
+
+                <button>
+                    <p>Sign Up with Google</p>
+                </button>
+            </div>
+
+            <div>
+                <img src={backframe} alt="frame" height={584} width={558} loading="lazy"/>
+
+                <img src={image} alt="student" height={490} width={558} loading="lazy"/>
+            </div>
         </div>
     )
 }
