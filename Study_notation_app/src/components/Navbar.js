@@ -32,10 +32,7 @@ function Navbar(props){
             <div className="flex ml-3 gap-3">
                 { !isLoggedIn &&
                     <Link to="/login">
-                        <button onClick={() => {
-                            setIsLoggedIn = false;
-                            toast.success("Logged out");
-                        }}>
+                        <button>
                             Login
                         </button>
                     </Link>
