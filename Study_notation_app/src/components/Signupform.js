@@ -15,7 +15,7 @@ const Signupform = () => {
                     <button>Student</button>
                     <button>Instructor</button>
                 </div>
-                
+
                  {/* firstname - lastname */}
                 <div>
                     <label>
@@ -47,6 +47,19 @@ const Signupform = () => {
 
                 </div>
 
+                {/* email addree */}
+                <div>
+                    <label>
+                        <p>Email Address<sub>*</sub></p>
+                        <input required
+                            type="email"
+                            name="email"
+                            onChange={changeHandler}
+                            placeholder="Enter your email address"
+                            value={formData.email}
+                        />
+                    </label>
+                </div>
 
             </form>
         </div>
