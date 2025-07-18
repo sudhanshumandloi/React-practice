@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import {AiOutlineEyeInvisible , AiOutlineEye} from "react-icons/ai"
 
 const Signupform = () => {
     const [formData, setFormdata] = useState({
         firstname:'', lastname:'', email:'', password:'', confirmpassword:''
     });
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const changeHandler = () =>{}
 
@@ -41,12 +44,6 @@ const Signupform = () => {
                     </label>
                 </div>
 
-
-                {/* password - confirm password */}
-                <div>
-
-                </div>
-
                 {/* email addree */}
                 <div>
                     <label>
@@ -58,6 +55,37 @@ const Signupform = () => {
                             placeholder="Enter your email address"
                             value={formData.email}
                         />
+                    </label>
+                </div>
+                
+                {/* password - confirm password */}
+                <div>
+                    <label>
+                        <p>Create Password<sub>*</sub></p>
+                        <input required
+                            type={showPassword ? ("text") : ("password")}
+                            name="password"
+                            onChange={changeHandler}
+                            placeholder="Enter password"
+                            value={formData.password}
+                       />
+                        <span onClick={() => setShowPassword((prev) => !prev)}>
+                            {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                        </span>
+                    </label>
+                    
+                    <label>
+                        <p>Confirm Password<sub>*</sub></p>
+                        <input required
+                            type={showPassword ? ("text") : ("password")}
+                            name="confirmpassword"
+                            onChange={changeHandler}
+                            placeholder="Enter password"
+                            value={formData.confirmpassword}
+                       />
+                        <span onClick={() => setShowPassword((prev) => !prev)}>
+                            {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                        </span>
                     </label>
                 </div>
 
