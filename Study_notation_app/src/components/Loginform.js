@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {AiOutlineEyeInvisible , AiOutlineEye} from "react-icons/ai"
+import { Link } from "react-router-dom";
 
 const Loginform = () => {
     const [formData, setFormdata] = useState({email:'', password:'' });
@@ -43,6 +44,10 @@ const Loginform = () => {
                     <span onClick={() => setShowPassword((prev) => !prev)}>
                         {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
                     </span>
+
+                    <Link to="#">
+                        <p>Forget Password</p>
+                    </Link>
                 </label>
             </form>
         </div>
