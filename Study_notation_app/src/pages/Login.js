@@ -2,7 +2,7 @@ import React from "react";
 import Template from "../components/Template";
 import loginimage from "../assets/login.png"
 
-function Login(setIsLoggedIn){
+function Login({setIsLoggedIn}){
     return (
         <div>
             <Template

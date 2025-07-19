@@ -2,7 +2,7 @@ import React from "react";
 import Template from "../components/Template";
 import signupimage from "../assets/signup.png";
 
-function Signup(setIsLoggedIn){
+function Signup({setIsLoggedIn}){
     return (
         <div>
             <Template
