@@ -1,8 +1,11 @@
 import React from "react";
+import Template from "../components/Template";
 
 function Login(){
     return (
-        <div>Login</div>
+        <div>
+            <Template />
+        </div>
     )
 }
 
