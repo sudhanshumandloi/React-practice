@@ -8,6 +8,9 @@ const Signupform = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+
     const changeHandler = (event) =>{
         setFormdata( prevData => (
             {
@@ -90,8 +93,8 @@ const Signupform = () => {
                             placeholder="Enter password"
                             value={formData.confirmpassword}
                        />
-                        <span onClick={() => setShowPassword((prev) => !prev)}>
-                            {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                        <span onClick={() => setShowConfirmPassword((prev) => !prev)}>
+                            {showConfirmPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
                         </span>
                     </label>
                 </div>
