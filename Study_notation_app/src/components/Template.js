@@ -1,5 +1,5 @@
 import React from "react";
-import {backframe} from "../assets/frame.png";
+import frame from "../assets/frame.png";
 import Loginform from "./Loginform";
 import Signupform from "./Signupform";
 
@@ -30,7 +30,7 @@ function Template({title, desc1, desc2, image, formtyp, setIsLoggedIn}){
             </div>
 
             <div>
-                <img src={backframe} alt="frame" height={584} width={558} loading="lazy"/>
+                <img src={frame} alt="frame" height={584} width={558} loading="lazy"/>
 
                 <img src={image} alt="student" height={490} width={558} loading="lazy"/>
             </div>

@@ -89,6 +89,10 @@ const Signupform = () => {
                     </label>
                 </div>
 
+                {/* submit button */}
+                <div>
+                    <button>Create Account</button>
+                </div>
             </form>
         </div>
     )
