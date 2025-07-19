@@ -1,10 +1,18 @@
 import React from "react";
 import Template from "../components/Template";
+import loginimage from "../assets/login.png"
 
-function Login(){
+function Login(setIsLoggedIn){
     return (
         <div>
-            <Template />
+            <Template
+                title={"Welcome Back "}     
+                desc1={"Build skills for today, mmoro"} 
+                desc2={"Education to future-proof career."}
+                image={loginimage}
+                formtyp={"login"}
+                setIsLoggedIn={setIsLoggedIn}
+            />
         </div>
     )
 }
