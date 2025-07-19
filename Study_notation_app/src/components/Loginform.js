@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import {AiOutlineEyeInvisible , AiOutlineEye} from "react-icons/ai"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Loginform = () => {
+const Loginform = ({setIsLoggedIn}) => {
+
+    const navigat = useNavigate();
+
     const [formData, setFormdata] = useState({email:'', password:'' });
 
     const [showPassword, setShowPassword] = useState(false);
@@ -16,9 +20,16 @@ const Loginform = () => {
          ) )
     }
 
+    function submitHandler(event){
+        event.preventDefault();
+        setIsLoggedIn(true);
+        toast.success("Logged in")
+        navigat("/dashbord")
+    }
+
     return (
         <div>
-            <form>
+            <form onSubmit={submitHandler}>
                 <label>
                     <p>
                         Email Address<sub>*</sub>
@@ -38,7 +49,7 @@ const Loginform = () => {
                     </p>
                     <input required
                         type={showPassword ? ("text") : ("password")}
-                        value={formData.email}
+                        value={formData.password}
                         onChange={changeHandler}
                         placeholder="Enter email id"
                         name="password"
