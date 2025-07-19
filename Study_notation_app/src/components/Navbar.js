@@ -47,7 +47,7 @@ function Navbar(props){
                 { isLoggedIn &&
                     <Link to="/">
                         <button onClick={() => {
-                            setIsLoggedIn = false;
+                            setIsLoggedIn(false);
                             toast.success("Logged out");
                         }}>
                             Log out
