@@ -8,7 +8,14 @@ const Signupform = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    const changeHandler = () =>{}
+    const changeHandler = (event) =>{
+        setFormdata( prevData => (
+            {
+                ...prevData,
+                [event.target.name]: event.target.value
+            }
+         ) )
+    }
 
     return (
         <div>
