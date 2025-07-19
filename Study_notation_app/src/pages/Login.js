@@ -7,7 +7,7 @@ function Login(setIsLoggedIn){
         <div>
             <Template
                 title={"Welcome Back "}     
-                desc1={"Build skills for today, mmoro"} 
+                desc1={"Build skills for today, tomorrow, and beyound."} 
                 desc2={"Education to future-proof career."}
                 image={loginimage}
                 formtyp={"login"}
