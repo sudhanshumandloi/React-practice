@@ -72,7 +72,7 @@ const Loginform = ({setIsLoggedIn}) => {
                     </Link>
                 </label>
                  
-                <button className="bg-yellow-50 font-medium rounded-[8px] text-richblack-900 px-[12px] py-[8px]">
+                <button className="bg-yellow-50 font-medium rounded-[8px] text-richblack-900 px-[12px] py-[8px] mt-6">
                     Sign in
                 </button>
             </form>
