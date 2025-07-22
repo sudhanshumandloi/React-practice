@@ -45,9 +45,9 @@ const Loginform = ({setIsLoggedIn}) => {
                     />
                 </label>
 
-                <label>
-                    <p>
-                        Password<sub>*</sub>
+                <label className="w-full">
+                    <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+                        Password<sub className="text-pink-200">*</sub>
                     </p>
                     <input required
                         type={showPassword ? ("text") : ("password")}
@@ -55,6 +55,7 @@ const Loginform = ({setIsLoggedIn}) => {
                         onChange={changeHandler}
                         placeholder="Enter email id"
                         name="password"
+                        className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                     />
 
                     <span onClick={() => setShowPassword((prev) => !prev)}>
