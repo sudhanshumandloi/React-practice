@@ -62,6 +62,7 @@ const Signupform = ({setIsLoggedIn}) => {
                             onChange={changeHandler}
                             placeholder="Enter your first name"
                             value={formData.firstname}
+                            className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                         />
                     </label>
                     
@@ -75,6 +76,7 @@ const Signupform = ({setIsLoggedIn}) => {
                             onChange={changeHandler}
                             placeholder="Enter your last name"
                             value={formData.lastname}
+                            className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                         />
                     </label>
                 </div>
@@ -91,6 +93,7 @@ const Signupform = ({setIsLoggedIn}) => {
                             onChange={changeHandler}
                             placeholder="Enter your email address"
                             value={formData.email}
+                            className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                         />
                     </label>
                 </div>
@@ -107,6 +110,7 @@ const Signupform = ({setIsLoggedIn}) => {
                             onChange={changeHandler}
                             placeholder="Enter password"
                             value={formData.password}
+                            className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                        />
                         <span onClick={() => setShowPassword((prev) => !prev)}>
                             {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
@@ -123,6 +127,7 @@ const Signupform = ({setIsLoggedIn}) => {
                             onChange={changeHandler}
                             placeholder="Enter password"
                             value={formData.confirmpassword}
+                            className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                        />
                         <span onClick={() => setShowConfirmPassword((prev) => !prev)}>
                             {showConfirmPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
