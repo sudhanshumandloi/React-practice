@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Deshbord from "./pages/Deshboard";
 import { useState } from "react";
+import Privateroute from "./components/Privateraoute";
 
 function App() {
 
@@ -20,7 +21,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/dashbord" element={<Deshbord />} />
+        <Route path="/dashbord" element={
+          <Privateroute setIsLoggedIn={setIsLoggedIn}>
+            <Deshbord />
+          </Privateroute>} />
 
       </Routes>
     </div>
