@@ -21,10 +21,10 @@ function Template({title, desc1, desc2, image, formtyp, setIsLoggedIn}){
                 (<Loginform setIsLoggedIn={setIsLoggedIn} />)
                 }
 
-                <div>
-                    <div></div>
-                    <div>OR</div>
-                    <div></div>
+                <div className="flex w-full items-center my-4 gap-x-2">
+                    <div className="w-full h-[1px] bg-richblack-700"></div>
+                    <div className="text-richblack-700 font-medium leading-[1.375rem]">OR</div>
+                    <div className="w-full h-[1px] bg-richblack-700"></div>
                 </div>
 
                 <button>
