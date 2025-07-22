@@ -34,7 +34,7 @@ function Navbar(props){
                     <Link to="/login">
                         <button className="bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px]
                             border border-richblack-700">
-                            Login
+                            Log in
                         </button>
                     </Link>
                 }
@@ -42,7 +42,7 @@ function Navbar(props){
                     <Link to="/signup">
                         <button className="bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px]
                             border border-richblack-700">
-                            Signup
+                            Sign up
                         </button>
                     </Link>
                 }
@@ -63,7 +63,7 @@ function Navbar(props){
                     <Link to="/dashbord">
                         <button className="bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px]
                             border border-richblack-700">
-                            dashbord
+                            Dashbord
                         </button>
                     </Link>
                 }
