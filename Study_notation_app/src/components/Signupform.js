@@ -144,7 +144,9 @@ const Signupform = ({setIsLoggedIn}) => {
 
                 {/* submit button */}
                 <div>
-                    <button>Create Account</button>
+                    <button className="w-full bg-yellow-50 font-medium rounded-[8px] text-richblack-900 px-[12px] py-[8px] mt-6">
+                        Create Account
+                    </button>
                 </div>
             </form>
         </div>
