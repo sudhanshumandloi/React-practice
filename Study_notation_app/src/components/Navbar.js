@@ -16,7 +16,7 @@ function Navbar(props){
             </Link>
 
             <nav>
-                <ul className="flex ml-3 gap-3">
+                <ul className="flex text-white gap-x-3">
                     <li>
                         <Link to = "/" >Home</Link>
                     </li>
