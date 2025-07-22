@@ -1,9 +1,9 @@
 import React from "react";
 
-function Home(){
+function Contact(){
     return (
         <div className="flex justify-center items-center text-white text-3xl h-full">Contact</div>
     )
 }
 
-export default Home;
+export default Contact;

@@ -24,7 +24,9 @@ function App() {
         <Route path="/dashbord" element={
           <Privateroute isLoggedIn={isLoggedIn}>
             <Deshbord />
-          </Privateroute>} />
+          </Privateroute>}
+        />
+        
 
       </Routes>
     </div>
