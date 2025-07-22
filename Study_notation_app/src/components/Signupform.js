@@ -53,7 +53,9 @@ const Signupform = ({setIsLoggedIn}) => {
                  {/* firstname - lastname */}
                 <div>
                     <label>
-                        <p>First Name<sub>*</sub></p>
+                        <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+                            First Name<sub>*</sub>
+                        </p>
                         <input required
                             type="text"
                             name="firstname"
@@ -64,7 +66,9 @@ const Signupform = ({setIsLoggedIn}) => {
                     </label>
                     
                     <label>
-                        <p>Last Name<sub>*</sub></p>
+                        <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+                            Last Name<sub>*</sub>
+                        </p>
                         <input required
                             type="text"
                             name="lastname"
@@ -78,7 +82,9 @@ const Signupform = ({setIsLoggedIn}) => {
                 {/* email addree */}
                 <div>
                     <label>
-                        <p>Email Address<sub>*</sub></p>
+                        <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+                            Email Address<sub>*</sub>
+                        </p>
                         <input required
                             type="email"
                             name="email"
@@ -92,7 +98,9 @@ const Signupform = ({setIsLoggedIn}) => {
                 {/* password - confirm password */}
                 <div>
                     <label>
-                        <p>Create Password<sub>*</sub></p>
+                        <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+                            Create Password<sub>*</sub>
+                        </p>
                         <input required
                             type={showPassword ? ("text") : ("password")}
                             name="password"
@@ -106,7 +114,9 @@ const Signupform = ({setIsLoggedIn}) => {
                     </label>
                     
                     <label>
-                        <p>Confirm Password<sub>*</sub></p>
+                        <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
+                            Confirm Password<sub>*</sub>
+                        </p>
                         <input required
                             type={showPassword ? ("text") : ("password")}
                             name="confirmpassword"
