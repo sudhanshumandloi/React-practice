@@ -29,17 +29,19 @@ function Navbar(props){
                 </ul>
             </nav>
 
-            <div className="flex ml-3 gap-3">
+            <div className="flex items-center gap-x-4">
                 { !isLoggedIn &&
                     <Link to="/login">
-                        <button>
+                        <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                            border border-richblack-700">
                             Login
                         </button>
                     </Link>
                 }
                 { !isLoggedIn &&
                     <Link to="/signup">
-                        <button>
+                        <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                            border border-richblack-700">
                             Signup
                         </button>
                     </Link>
@@ -48,15 +50,19 @@ function Navbar(props){
                     <Link to="/">
                         <button onClick={() => {
                             setIsLoggedIn(false);
-                            toast.success("Logged out");
-                        }}>
+                            toast.success("Logged out");  
+                            }}
+                            className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                            border border-richblack-700"
+                        >
                             Log out
                         </button>
                     </Link>
                 }
                 { isLoggedIn &&
                     <Link to="/dashbord">
-                        <button>
+                        <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                            border border-richblack-700">
                             dashbord
                         </button>
                     </Link>
