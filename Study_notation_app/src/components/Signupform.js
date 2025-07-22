@@ -15,6 +15,8 @@ const Signupform = ({setIsLoggedIn}) => {
 
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+    const [accountType, setAccountType] = useState("student");
+
 
     const changeHandler = (event) =>{
         setFormdata( prevData => (
@@ -45,9 +47,23 @@ const Signupform = ({setIsLoggedIn}) => {
         <div>
             <form onSubmit={submitHandler}>
                 {/* student-instructor tab */}
-                <div>
-                    <button>Student</button>
-                    <button>Instructor</button>
+                <div className="flex bg-richblack-800 p-1 gap-x-1 my-6 rounded-full max-w-max">
+                    <button className={`${accountType === "student"
+                        ? "bg-richblack-900 text-richblack-5"
+                        : "bg-transparent text-richblack-200"
+                        } py-2 px-5 rounded-full transition-all duration-500`}
+                        onClick={() => setAccountType("student")}
+                    >
+                        Student
+                    </button>
+                    <button className={`${accountType === "instructor"
+                        ? "bg-richblack-900 text-richblack-5"
+                        : "bg-transparent text-richblack-200"
+                        } py-2 px-5 rounded-full transition-all duration-500`}
+                        onClick={() => setAccountType("instructor")}
+                    >
+                        Instructor
+                    </button>
                 </div>
 
                  {/* firstname - lastname */}
@@ -133,8 +149,8 @@ const Signupform = ({setIsLoggedIn}) => {
                             className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                        />
                         <span className="absolute right-3 top-[38px] cursor-pointer" 
-                            onClick={() => setShowPassword((prev) => !prev)}>
-                            {showPassword
+                            onClick={() => setShowConfirmPassword((prev) => !prev)}>
+                            {showConfirmPassword
                             ? (<AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />)
                             : (<AiOutlineEye fontSize={24} fill="#AFB2BF" />)}
                         </span>
