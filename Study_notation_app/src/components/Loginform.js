@@ -45,7 +45,7 @@ const Loginform = ({setIsLoggedIn}) => {
                     />
                 </label>
 
-                <label className="w-full">
+                <label className="w-full relative">
                     <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                         Password<sup className="text-pink-200">*</sup>
                     </p>
@@ -58,8 +58,11 @@ const Loginform = ({setIsLoggedIn}) => {
                         className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                     />
 
-                    <span onClick={() => setShowPassword((prev) => !prev)}>
-                        {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                    <span className="absolute right-3 top-[38px] cursor-pointer" 
+                        onClick={() => setShowPassword((prev) => !prev)}>
+                        {showPassword
+                        ? (<AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />)
+                        : (<AiOutlineEye fontSize={24} fill="#AFB2BF" />)}
                     </span>
 
                     <Link to="#">
