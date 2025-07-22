@@ -35,10 +35,21 @@ function Template({title, desc1, desc2, image, formtyp, setIsLoggedIn}){
                 </button>
             </div>
 
-            <div>
-                <img src={frame} alt="frame" height={584} width={558} loading="lazy"/>
+            <div className="w-11/12 relative max-w-[450px]">
+                <img src={frame}
+                    alt="frame" 
+                    height={584} 
+                    width={558} 
+                    loading="lazy"
+                />
 
-                <img src={image} alt="student" height={490} width={558} loading="lazy"/>
+                <img src={image} 
+                    alt="student" 
+                    height={490} 
+                    width={558} 
+                    loading="lazy"
+                    className="absolute -top-4 right-4"
+                />
             </div>
         </div>
     )
