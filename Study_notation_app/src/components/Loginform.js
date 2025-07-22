@@ -33,7 +33,7 @@ const Loginform = ({setIsLoggedIn}) => {
                 className="flex flex-col w-full gap-y-4 mt-6">
                 <label className="w-full"> 
                     <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-                        Email Address<sub className="text-pink-200">*</sub>
+                        Email Address<sup className="text-pink-200">*</sup>
                     </p>
                     <input required
                         type="email"
@@ -47,7 +47,7 @@ const Loginform = ({setIsLoggedIn}) => {
 
                 <label className="w-full">
                     <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-                        Password<sub className="text-pink-200">*</sub>
+                        Password<sup className="text-pink-200">*</sup>
                     </p>
                     <input required
                         type={showPassword ? ("text") : ("password")}
