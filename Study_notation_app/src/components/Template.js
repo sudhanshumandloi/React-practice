@@ -2,6 +2,7 @@ import React from "react";
 import frame from "../assets/frame.png";
 import Loginform from "./Loginform";
 import Signupform from "./Signupform";
+import {FcGoogle} from "react-icons/fc"
 
 function Template({title, desc1, desc2, image, formtyp, setIsLoggedIn}){
     return(
@@ -27,7 +28,9 @@ function Template({title, desc1, desc2, image, formtyp, setIsLoggedIn}){
                     <div className="w-full h-[1px] bg-richblack-700"></div>
                 </div>
 
-                <button>
+                <button className="w-full flex justify-center items-center rounded-[8px] font-medium 
+                    text-richblack-100 border border-richblack-700 px-[12px] py-[8px] gap-x-2 mt-6">
+                    <FcGoogle />
                     <p>Sign Up with Google</p>
                 </button>
             </div>
