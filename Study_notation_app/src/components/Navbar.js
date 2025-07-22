@@ -12,7 +12,7 @@ function Navbar(props){
     return (
         <div className="flex justify-evenly">
             <Link to="/">
-                 <img src={logo} alt='logo' widtg={160} height={32} loading="lazy" />
+                 <img src={logo} alt='logo' width={160} height={32} loading="lazy" />
             </Link>
 
             <nav>
