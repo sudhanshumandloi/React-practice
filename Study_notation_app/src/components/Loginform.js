@@ -23,8 +23,10 @@ const Loginform = ({setIsLoggedIn}) => {
     function submitHandler(event){
         event.preventDefault();
         setIsLoggedIn(true);
-        toast.success("Logged in")
-        navigat("/dashbord")
+        toast.success("Logged in");
+        navigat("/dashbord");
+        console.log("printing the formdata");
+        console.log(formData);
     }
 
     return (

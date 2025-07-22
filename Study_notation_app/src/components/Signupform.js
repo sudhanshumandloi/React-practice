@@ -38,8 +38,13 @@ const Signupform = ({setIsLoggedIn}) => {
         const accountData = {
             ...formData
         };
-        console.log(accountData);
-        navigat("/dashbord")
+        const finalData = {
+            ...accountData,
+            accountType
+        };
+        console.log("printing the final account data");
+        console.log(finalData);
+        navigat("/dashbord");
 
     }
 
