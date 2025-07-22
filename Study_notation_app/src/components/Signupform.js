@@ -100,7 +100,7 @@ const Signupform = ({setIsLoggedIn}) => {
                 
                 {/* password - confirm password */}
                 <div>
-                    <label>
+                    <label className="relative">
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                             Create Password<sup className="text-pink-200">*</sup>
                         </p>
@@ -112,12 +112,15 @@ const Signupform = ({setIsLoggedIn}) => {
                             value={formData.password}
                             className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                        />
-                        <span onClick={() => setShowPassword((prev) => !prev)}>
-                            {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                        <span className="absolute right-3 top-[38px] cursor-pointer" 
+                            onClick={() => setShowPassword((prev) => !prev)}>
+                            {showPassword
+                            ? (<AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />)
+                            : (<AiOutlineEye fontSize={24} fill="#AFB2BF" />)}
                         </span>
                     </label>
                     
-                    <label>
+                    <label className="relative">
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                             Confirm Password<sup className="text-pink-200">*</sup>
                         </p>
@@ -129,9 +132,13 @@ const Signupform = ({setIsLoggedIn}) => {
                             value={formData.confirmpassword}
                             className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                        />
-                        <span onClick={() => setShowConfirmPassword((prev) => !prev)}>
-                            {showConfirmPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                        <span className="absolute right-3 top-[73px] cursor-pointer" 
+                            onClick={() => setShowPassword((prev) => !prev)}>
+                            {showPassword
+                            ? (<AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />)
+                            : (<AiOutlineEye fontSize={24} fill="#AFB2BF" />)}
                         </span>
+
                     </label>
                 </div>
 
