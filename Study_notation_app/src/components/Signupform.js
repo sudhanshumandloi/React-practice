@@ -51,8 +51,8 @@ const Signupform = ({setIsLoggedIn}) => {
                 </div>
 
                  {/* firstname - lastname */}
-                <div>
-                    <label>
+                <div className="w-full flex gap-x-4">
+                    <label className="w-full">
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                             First Name<sup className="text-pink-200">*</sup>
                         </p>
@@ -66,7 +66,7 @@ const Signupform = ({setIsLoggedIn}) => {
                         />
                     </label>
                     
-                    <label>
+                    <label className="w-full">
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                             Last Name<sup className="text-pink-200">*</sup>
                         </p>
@@ -99,8 +99,8 @@ const Signupform = ({setIsLoggedIn}) => {
                 </div>
                 
                 {/* password - confirm password */}
-                <div>
-                    <label className="relative">
+                <div className="w-full flex gap-x-4">
+                    <label className="relative w-full">
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                             Create Password<sup className="text-pink-200">*</sup>
                         </p>
@@ -120,7 +120,7 @@ const Signupform = ({setIsLoggedIn}) => {
                         </span>
                     </label>
                     
-                    <label className="relative">
+                    <label className="relative w-full">
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                             Confirm Password<sup className="text-pink-200">*</sup>
                         </p>
