@@ -16,7 +16,7 @@ function Navbar(props){
             </Link>
 
             <nav>
-                <ul className="flex text-white gap-x-3">
+                <ul className="flex text-richblack-100 gap-x-3">
                     <li>
                         <Link to = "/" >Home</Link>
                     </li>
@@ -32,7 +32,7 @@ function Navbar(props){
             <div className="flex items-center gap-x-4">
                 { !isLoggedIn &&
                     <Link to="/login">
-                        <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                        <button className="bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px]
                             border border-richblack-700">
                             Login
                         </button>
@@ -40,7 +40,7 @@ function Navbar(props){
                 }
                 { !isLoggedIn &&
                     <Link to="/signup">
-                        <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                        <button className="bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px]
                             border border-richblack-700">
                             Signup
                         </button>
@@ -52,7 +52,7 @@ function Navbar(props){
                             setIsLoggedIn(false);
                             toast.success("Logged out");  
                             }}
-                            className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                            className="bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px]
                             border border-richblack-700"
                         >
                             Log out
@@ -61,7 +61,7 @@ function Navbar(props){
                 }
                 { isLoggedIn &&
                     <Link to="/dashbord">
-                        <button className="bg-richblack-800 text-white py-[8px] px-[12px] rounded-[8px]
+                        <button className="bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px]
                             border border-richblack-700">
                             dashbord
                         </button>
