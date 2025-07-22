@@ -54,7 +54,7 @@ const Signupform = ({setIsLoggedIn}) => {
                 <div>
                     <label>
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-                            First Name<sub>*</sub>
+                            First Name<sup className="text-pink-200">*</sup>
                         </p>
                         <input required
                             type="text"
@@ -67,7 +67,7 @@ const Signupform = ({setIsLoggedIn}) => {
                     
                     <label>
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-                            Last Name<sub>*</sub>
+                            Last Name<sup className="text-pink-200">*</sup>
                         </p>
                         <input required
                             type="text"
@@ -83,7 +83,7 @@ const Signupform = ({setIsLoggedIn}) => {
                 <div>
                     <label>
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-                            Email Address<sub>*</sub>
+                            Email Address<sup className="text-pink-200">*</sup>
                         </p>
                         <input required
                             type="email"
@@ -99,7 +99,7 @@ const Signupform = ({setIsLoggedIn}) => {
                 <div>
                     <label>
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-                            Create Password<sub>*</sub>
+                            Create Password<sup className="text-pink-200">*</sup>
                         </p>
                         <input required
                             type={showPassword ? ("text") : ("password")}
@@ -115,7 +115,7 @@ const Signupform = ({setIsLoggedIn}) => {
                     
                     <label>
                         <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
-                            Confirm Password<sub>*</sub>
+                            Confirm Password<sup className="text-pink-200">*</sup>
                         </p>
                         <input required
                             type={showPassword ? ("text") : ("password")}
