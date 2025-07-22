@@ -7,6 +7,8 @@ import Signup from "./pages/Signup";
 import Deshbord from "./pages/Deshboard";
 import { useState } from "react";
 import Privateroute from "./components/Privateraoute";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
 
@@ -26,7 +28,8 @@ function App() {
             <Deshbord />
           </Privateroute>}
         />
-        
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 
       </Routes>
     </div>
