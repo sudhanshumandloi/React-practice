@@ -66,7 +66,9 @@ const Loginform = ({setIsLoggedIn}) => {
                     </span>
 
                     <Link to="#">
-                        <p>Forget Password</p>
+                        <p className="text-xs mt-1 text-blue-100 max-w-max ml-auto">
+                            Forget Password
+                        </p>
                     </Link>
                 </label>
                  
