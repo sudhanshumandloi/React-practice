@@ -72,7 +72,9 @@ const Loginform = ({setIsLoggedIn}) => {
                     </Link>
                 </label>
                  
-                <button>Sign in</button>
+                <button className="bg-yellow-50 font-medium rounded-[8px] text-richblack-900 px-[12px] py-[8px]">
+                    Sign in
+                </button>
             </form>
         </div>
     )
