@@ -2,7 +2,7 @@ import React from "react";
 import frame from "../assets/frame.png";
 import Loginform from "./Loginform";
 import Signupform from "./Signupform";
-import {FcGoogle} from "react-icons/fc"
+import {FcGoogle} from "react-icons/fc";
 
 function Template({title, desc1, desc2, image, formtyp, setIsLoggedIn}){
     return(
