@@ -7,7 +7,7 @@ export default function Random(){
     return(
         <div className="bg-green-500 w-1/2 rounded-md h-[450px] border border-black 
         flex flex-col mt-[15px] items-center gap-y-5">
-            <h1>A RANDOM GIF</h1>
+            <h1 className="text-2xl underline font-bold mt-[20px]">A RANDOM GIF</h1>
             <img src={gif} alt="gif" />
             <button>GENERATE</button>
         </div>
