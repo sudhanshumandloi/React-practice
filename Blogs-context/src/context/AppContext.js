@@ -27,11 +27,11 @@ function AppContextProvider({children}){
             setTotalPages(null);
         }
         setLoading(false);
+    }
 
-        function handlePageChange(page){
-            setPage(page);
-            fetchBlogPosts(page);
-        }
+    function handlePageChange(page){
+        setPage(page);
+        fetchBlogPosts(page);
     }
 
     const value = {
@@ -42,7 +42,9 @@ function AppContextProvider({children}){
         page,
         setPage,
         totalPages,
-        setTotalPages
+        setTotalPages,
+        fetchBlogPosts,
+        handlePageChange
     };
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>
