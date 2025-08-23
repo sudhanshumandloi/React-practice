@@ -1,5 +1,5 @@
-import { use } from "react";
 import { createContext, useState } from "react";
+import { baseUrl } from "../baseUrl";
 
 export const AppContext = createContext();
 
@@ -19,6 +19,26 @@ function AppContextProvider({children}){
         totalPages,
         setTotalPages
     };
+
+    async function fetchBlogPosts(page = 1) {
+        setLoading(true);
+        let url = `${baseUrl}?page=${page}`;
+        try{
+            const result = await fetch(url);
+            const data = await result.json();
+            console.log(data);
+            setPage(data.page);
+            setPosts(data.posts);
+            setTotalPages(data.totalPages);
+        }
+        catch(error){
+            console.log("error in fetching data");
+            setPage(1);
+            setPosts([]);
+            setTotalPages(null);
+        }
+        setLoading(false);
+    }
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }
