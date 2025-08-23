@@ -9,17 +9,6 @@ function AppContextProvider({children}){
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(null);
 
-    const value = {
-        loading,
-        setLoading,
-        posts,
-        setPosts,
-        page,
-        setPage,
-        totalPages,
-        setTotalPages
-    };
-
     async function fetchBlogPosts(page = 1) {
         setLoading(true);
         let url = `${baseUrl}?page=${page}`;
@@ -38,7 +27,23 @@ function AppContextProvider({children}){
             setTotalPages(null);
         }
         setLoading(false);
+
+        function handlePageChange(page){
+            setPage(page);
+            fetchBlogPosts(page);
+        }
     }
+
+    const value = {
+        loading,
+        setLoading,
+        posts,
+        setPosts,
+        page,
+        setPage,
+        totalPages,
+        setTotalPages
+    };
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }
