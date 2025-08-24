@@ -1,4 +1,8 @@
 
 export default function Header(){
-    return
+    return (
+        <div>
+            <h1>Codehepl Blogs</h1>
+        </div>
+    );
 }
