@@ -1,3 +1,4 @@
+import './App.css';
 import { useContext, useEffect } from "react";
 import Blogs from "./components/Blogs";
 import Header from "./components/Header";
