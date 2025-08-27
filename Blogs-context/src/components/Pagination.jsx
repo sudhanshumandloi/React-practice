@@ -15,6 +15,9 @@ export default function Pagination(){
                 page < totalPages && 
                 (<button onClick={() => handlePageChange(page+1)}>Next</button>)
             }
+            <p>
+                page {page} of {totalPages}
+            </p>
         </div>
     );
 }
