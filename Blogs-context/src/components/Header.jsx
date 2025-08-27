@@ -1,8 +1,8 @@
 
 export default function Header(){
     return (
-        <div>
-            <h1>Codehepl Blogs</h1>
+        <div className="border shadow-md py-2">
+            <h1 className="text-xl uppercase text-center font-bold">Codehepl Blogs</h1>
         </div>
     );
 }
