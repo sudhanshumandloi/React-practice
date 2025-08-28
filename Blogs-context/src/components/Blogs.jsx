@@ -6,7 +6,7 @@ export default function Blogs(){
     const {loading, posts} = useContext(AppContext);
 
     return(
-        <div>
+        <div className=" w-[40%]">
             {
                 loading ? (<div className="items-center justify-center font-bold text-xl">
                                 Loading
