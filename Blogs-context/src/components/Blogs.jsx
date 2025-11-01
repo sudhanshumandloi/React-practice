@@ -16,15 +16,15 @@ export default function Blogs(){
                                     <p>No post found</p>
                                 </div>) : (posts.map( (post) => (
                                     <div key={post.id}>
-                                        <p className="font-bold text-sm">{post.title}</p>
-                                        <p>
-                                            By<span>{post.author}</span>on<span>{post.category}</span>
+                                        <p className="font-bold text-xs">{post.title}</p>
+                                        <p className="text-[11px]">
+                                            By<span className="italic">{post.author}</span>on<span className="underline font-bold">{post.category}</span>
                                         </p>
-                                        <p>Posted on{post.date}</p>
-                                        <p>{post.content}</p>
-                                        <div>
+                                        <p className="text-[11px] ">Posted on{post.date}</p>
+                                        <p className="text-[12px] mt-[10px]">{post.content}</p>
+                                        <div className="flex gap-x-3">
                                             {post.tags.map( (tag, index) => {
-                                                return <span key={index}>{`#${tag}`}</span>
+                                                return <span key={index} className="text-blue-500 underline font-bold text-[11px]">{`#${tag}`}</span>
                                             })}
                                         </div>
                                     </div>
