@@ -6,9 +6,9 @@ export default function Blogs(){
     const {loading, posts} = useContext(AppContext);
 
     return(
-        <div className=" w-[40%]">
+        <div className=" w-11/12 py-4 max-w-[550px] flex flex-col gap-y-7">
             {
-                loading ? (<div className="items-center justify-center font-bold text-xl">
+                loading ? (<div className=" ">
                                 Loading
                             </div>
                         ) : ( posts.length === 0 ? 
@@ -16,7 +16,7 @@ export default function Blogs(){
                                     <p>No post found</p>
                                 </div>) : (posts.map( (post) => (
                                     <div key={post.id}>
-                                        <p className="font-bold ">{post.title}</p>
+                                        <p className="font-bold text-sm">{post.title}</p>
                                         <p>
                                             By<span>{post.author}</span>on<span>{post.category}</span>
                                         </p>
