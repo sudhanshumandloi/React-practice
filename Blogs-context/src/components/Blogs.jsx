@@ -8,8 +8,8 @@ export default function Blogs(){
     return(
         <div className=" w-11/12 py-4 max-w-[650px] flex flex-col gap-y-7 mt-[50px] ">
             {
-                loading ? (<div className=" ">
-                                Loading
+                loading ? (<div className=" justify-center items-start flex">
+                                Loading...
                             </div>
                         ) : ( posts.length === 0 ? 
                                 (<div>
